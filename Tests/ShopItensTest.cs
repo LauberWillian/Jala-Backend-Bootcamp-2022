@@ -16,6 +16,24 @@ namespace Tests
         {
 
         }
+        
+        [Test]
+        public async Task IncrementShoppingCart()
+        {
+            var product = new Product()
+            {
+                Name = "Teste",
+                Description = "Teste",
+                Price = 10,
+                Quantity = 10
+            };
+
+            var carrinho = new ShoppingCart();
+            ShoppingCartItem item = new ShoppingCartItem(product, 1);
+            item.IncrementQunatity();
+            
+            Assert.IsTrue(carrinho.getItemCount() > 0);
+        }
 
         [Test]
         public async Task CreateANewProduct()
