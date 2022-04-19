@@ -18,6 +18,6 @@ namespace Shop.API.Models
         [JsonIgnore]
         public virtual Stock? Stock { get; set; }
 
-
+        public int Quantity { get; set; }
     }
 }

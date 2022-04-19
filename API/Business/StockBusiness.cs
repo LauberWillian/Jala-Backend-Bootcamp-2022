@@ -2,11 +2,11 @@ using Shop.API.Models;
 using Shop.API.Repository;
 namespace Shop.API.Business
 {
-    public class ProductBusiness : IProductBusiness
+    public class StockBusiness : IProductBusiness
     {
 
         private readonly IProductRepository _productRepository;
-        public ProductBusiness(IProductRepository productRepository)
+        public StockBusiness(IProductRepository productRepository)
         {
             _productRepository = productRepository;
         }

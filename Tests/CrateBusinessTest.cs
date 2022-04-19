@@ -49,7 +49,7 @@ namespace Tests
                 products = new List<Product>() { item1, item2 }
             };
 
-            var business = new CrateBusiness();
+            var business = new CreateBusiness();
             var result = business.AddToCart(crate);
             Assert.AreEqual(result, crate);
             Assert.Contains(item1, crate.products);

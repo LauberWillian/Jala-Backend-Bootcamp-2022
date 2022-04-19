@@ -3,18 +3,17 @@ using Shop.API.Models;
 namespace Shop.API.Business;
 
 
-public class CrateBusiness
+public class CreateBusiness
 {
 
-    public CrateBusiness()
+    public CreateBusiness()
     {
 
     }
 
     public Crate AddToCart(Crate crate)
     {
-
-        return _CrateRepository.AddToCart(crate);
+        object _CreateRepository;
     }
 
 }
