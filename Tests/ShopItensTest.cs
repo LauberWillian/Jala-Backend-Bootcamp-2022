@@ -29,7 +29,7 @@ namespace Tests
             };
 
             var carrinho = new ShoppingCart();
-            ShoppingCartItem item = new ShoppingCartItem(product, 1);
+            ShopItem item = new ShopItem(product, 1);
             item.IncrementQunatity();
             
             Assert.IsTrue(carrinho.getItemCount() > 0);
@@ -47,50 +47,13 @@ namespace Tests
             };
 
             var carrinho = new ShoppingCart();
-            ShoppingCartItem item = new ShoppingCartItem(product, 1);  
+            ShopItem item = new ShopItem(product, 1);  
             
             
             Assert.IsTrue(carrinho.getItemCount() > 0);
         }
     }
 
-    public class ShoppingCartItem
-    {
-        private readonly Product product;
-        private int quantity = 0;
 
-        public ShoppingCartItem(Product product, int quantity)
-        {
-            this.product = product;
-            this.quantity = quantity;
-        }
-        
-        public int IncrementQunatity()
-        {
-            this.quantity++;
-            return quantity;
-        }
-    }
 
-    public class ShoppingCart
-    {
-        List<Product> products = new List<Product>();
-        public void removeFromStock(ShoppingCartItem item)
-        {
-            //remove from stock logic
-        }
-        
-        public void getTotalPrice(CurrencyType currency)
-        {
-            //get total price logic
-        }
-        public int getItemCount()
-        {
-            return products.Count;
-        }
-    }
-
-    public class CurrencyType
-    {
-    }
 }
