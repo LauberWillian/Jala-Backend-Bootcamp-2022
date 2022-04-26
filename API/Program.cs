@@ -20,8 +20,8 @@ builder.Services.AddCors(options =>
     options.AddPolicy("corsapp", policy =>
     {
         policy.WithOrigins("*")
-        .AllowAnyMethod()
-        .AllowAnyHeader();
+            .AllowAnyMethod()
+            .AllowAnyHeader();
     });
 });
 
